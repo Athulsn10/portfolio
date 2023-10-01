@@ -25,3 +25,17 @@ document.getElementById('downloadButton').addEventListener('click', function () 
     // Remove the download link from the document
     document.body.removeChild(downloadLink);
 });
+
+window.addEventListener('load', function () {
+    // Check if the user agent indicates a mobile device
+    var isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    // Check if the screen width is below a certain threshold (adjust as needed)
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var isSmallScreen = screenWidth < 600; // Adjust the threshold as needed
+
+    // Show an alert if both conditions are met
+    if (isMobile && isSmallScreen) {
+        alert('I recommend Using A Desktop Device For Viewing This Site');
+    }
+});
