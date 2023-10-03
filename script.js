@@ -39,3 +39,8 @@ window.addEventListener('load', function () {
         alert('I recommend Using A Desktop Device For Viewing This Site');
     }
 });
+
+window.onload = function() {
+    var shadowRoot = document.querySelector('spline-viewer').shadowRoot;
+    shadowRoot.querySelector('#logo').remove();
+}
